@@ -1,0 +1,18 @@
+{% extends "erp/base_generic.html" %}
+{% block title %}Main{% endblock %}
+{% block content %}
+<table>
+<tr><th>Sale</th><th>Released</th><th>Purchased</th><th>Delivered</th><th>Days Left<br />On Schedule</th><th>Budget</th></tr>
+{% for sale in sales.all %}
+    <tr>
+    <td><a href="sale/{{ sale.id }}">{{ sale.name }}</td>
+    <td>{{ sale.percentOfBOMReleased }}%</td>
+    <td>{{ sale.percentOfBOMPurchased }}%</td>
+    <td>{{ sale.percentOfBOMDelivered }}%</td>
+    <td>{{ sale.daysUntilShip }}</td>
+    <td>{{ sale.percentOfBudgetUsed }}% ${{ sale.totalCost }}</td>
+    </tr>
+{% endfor %}
+</table>
+{% endblock %}
+

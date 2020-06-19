@@ -1,0 +1,75 @@
+
+* {
+  font-family: "Lucida Grande","DejaVu Sans","Bitstream Vera Sans",Verdana,Arial,sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;  
+  color: #333;
+  background: #fff;    
+}
+
+a:link, a:visited {
+    color: blue;
+    text-decoration: none;    
+}
+
+table {
+  margin: 0 auto;
+  width:90%;
+  padding:5px;
+  border:1px solid black;
+  border-collapse:collapse;
+}
+
+td {
+border:1px solid black;
+border-collapse:collapse;
+} 
+
+th {
+text-align:center;
+border:1px solid black;
+border:1px solid black;
+border-collapse:collapse;
+}
+
+#branding h1 {
+ padding : 0 10px;
+ font-size: 18px;
+ margin: 8px 0;
+ font-weight: normal;
+ color: #f4f379;
+}
+
+#header {
+ background : #417690;
+ color : #ffc;
+ overflow : hidden;       
+}
+
+#header a:link, #header a:visited {
+ color : white;
+}
+
+#user-tools {
+ position : absolute;
+ top: 0;
+ right: 0;
+ padding: 1.2em 10px;
+ font-size: 11px;
+ text-align: right;
+}
+
+#top-bar {
+  margin-top:0.2cm;
+  text-align: center;
+}
+
+#footer {
+  text-align: center;
+}
+
+

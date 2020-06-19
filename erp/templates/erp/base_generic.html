@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% load staticfiles %}
+
+<head>
+    <title>Twin Coast Metrology Manufacturing</title>
+    <link rel="stylesheet" type="text/css" href="/static/erp/base.css" />        
+</head>
+
+<body>
+  <div id="header">
+    <div id="branding">
+    <h1>{% block title %}{% endblock %} - Twin Coast Metrology Manufacturing</h1>
+    </div>
+    
+    <div id="user-tools">
+      {% if user.is_authenticated %}
+        Welcome, {{ user.username }}.
+        <a href="/admin/password_change/">Change password</a> /
+        <a href="/accounts/logout/">Log out</a>            
+      {% else %}
+        Welcome, Please log in.
+      {% endif %}
+    </div>    
+  </div>
+  
+  <div id="top-bar">
+  <a href="/">Home</a> - 
+  <a href="/sale/">Sales</a> - 
+  <a href="/buy/">Buys</a> - 
+  <a href="/bom/">Bill Of Material (BOM)</a> - 
+  <a href="/vendor/">Vendors</a> -
+  <a href="/people/addtimecard">Time Card</a> 
+  </div>
+
+  <hr />
+  <div id="content">
+  {% block content %}{% endblock %}
+  </div>
+  <hr />
+
+  <div id="footer">
+  <a href="/admin/">Site Administration</a> - <a href="http://www.gmail.com">TCM Email</a> - <a href="http://www.twincoastmetrology.com">TCM Public Web Site</a>
+  </div>
+  <center><img src="{% static "erp/logo.png" %}" width=128 alt="Logo"/></center>
+
+</body>
+</html>

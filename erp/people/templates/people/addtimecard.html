@@ -1,0 +1,29 @@
+{% extends "erp/base_generic.html" %}
+{% block title %}Time Card{% endblock %}
+{% block content %}
+
+<script type="text/javascript"> 
+window.onload = function() 
+{ 
+     document.getElementById("id_name").onchange = function() 
+     { 
+         this.form.submit();
+     }; 
+}; 
+</script> 
+
+<form action="/people/addtimecard" method="get">
+{% csrf_token %}
+{{ filterForm }}
+</form>
+<hr />
+
+<form method="post" action="">
+    <table>
+        {{ timeEntryFormSet }}
+    </table>
+</form>
+
+
+{% endblock %}
+
